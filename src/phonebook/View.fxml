@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="phonebook.ViewController">
+    <children>
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="22.0" minHeight="16" minWidth="69" prefHeight="17.0" prefWidth="95.0" text="Telefonkönyv" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <SplitPane dividerPositions="0.24749163879598662" layoutY="56.0" prefHeight="598.0" prefWidth="600.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <StackPane id="menuPane" fx:id="menuPane" layoutX="-45.0" layoutY="85.0" prefHeight="596.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Pane id="contactPane" fx:id="contactPane" prefHeight="596.0" prefWidth="447.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Pane id="exportPane" fx:id="exportPane" layoutX="10.0" layoutY="10.0" prefHeight="596.0" prefWidth="447.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TableView id="table" fx:id="table" prefHeight="447.0" prefWidth="447.0">
+                                    <placeholder>
+                                        <Label text="Nincs adat!"/>
+                                    </placeholder>
+                                    <columns>
+                            
+                                    </columns>
+                                </TableView>
+                                <VBox layoutX="124.0" layoutY="463.0" prefHeight="201.0" prefWidth="209.0" spacing="10.0">
+                                    <children>
+                                        <TextField id="inputLastName" fx:id="inputLastName" prefHeight="25.0" prefWidth="140.0" promptText="Kovács" />
+                                        <TextField id="inputFirstName" fx:id="inputFirstName" promptText="Gyula" />
+                                        <TextField id="inputEmail" fx:id="inputEmail" promptText="test@gmail.com" />
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="14.0" layoutY="463.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0" text="Vezetéknév:" />
+                                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0" text="Email:" />
+                                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0" text="Keresztnév:" />
+                                    </children>
+                                </VBox>
+                                <Button id="addNewContactButton" fx:id="addNewContactButton" alignment="TOP_LEFT" layoutX="350.0" layoutY="490.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="95.0" text="Új kontakt hozzááadása" textAlignment="CENTER" wrapText="true" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
